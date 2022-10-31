@@ -71,6 +71,7 @@ function Layout({ children }) {
 
   const menuToBeRendered = user?.isAdmin ? adminMenu : user?.isDoctor ? doctorMenu : userMenu;
   const role = user?.isAdmin ? "Admin" : user?.isDoctor ? "Doctor" : "User";
+  if(window.location.pathname.includes('/admin') && role!=='Admin') navigate('/')
   return (
     <div className="main">
       <div className="d-flex layout">
