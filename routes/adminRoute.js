@@ -40,6 +40,9 @@ router.get("/get-all-users", authMiddleware, async (req, res) => {
   }
 });
 
+
+
+
 router.post(
   "/change-doctor-account-status",
   authMiddleware,
